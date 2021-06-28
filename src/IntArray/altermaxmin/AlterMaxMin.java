@@ -24,7 +24,14 @@ public class AlterMaxMin {
             A[i]=min;
             A[index]=temp;
         }
-        reverse(A,0);
-        //for (int i=0;i<A.length;i++) System.out.print(A[i]+" ");
+        //reverse(A,0);
+        for (int i=0;i<A.length;i+=2){
+            int temp=A[A.length-1];
+            for (int j=A.length-1;j>i;j--){
+                A[j]=A[j-1];
+            }
+            A[i]=temp;
+        }
+        for (int i=0;i<A.length;i++) System.out.print(A[i]+" ");
     }
 }
